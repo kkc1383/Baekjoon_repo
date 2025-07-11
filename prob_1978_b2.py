@@ -16,4 +16,4 @@ for i in my_list: # 원소 숫자
             break
     if(not_prime==0):
         prime_count+=1
-print(prime_count)
+print(prime_count) 
