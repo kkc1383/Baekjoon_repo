@@ -1,6 +1,6 @@
 import sys
 
-log_list=[]
+log_list=[] 
 def hanoi(level, start, another, goal,real_level):
     if real_level<=20:
         if level==1:
