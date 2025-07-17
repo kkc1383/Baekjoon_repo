@@ -3,7 +3,7 @@ import sys
 n,c=list(map(int,sys.stdin.readline().rstrip().split()))
 
 house_list=[int(sys.stdin.readline()) for _ in range(n)]
-
+ 
 house_list.sort()
 
 def isPass(gap,total_count):
