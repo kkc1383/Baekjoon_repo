@@ -19,5 +19,5 @@ else:
         heapq.heappush(card_list,cost)
     print(total_cost)
 
-# 더한 값을 다시 heap에 넣는 방법, 그렇게 또 더할 수 있음.
+# 더한 값을 다시 heap에 넣는 방법, 그렇게 또 더할 수 있음. 최소의 누적합을 갖는 방법
 # 그리고 작은 값끼리 더해야 하기 때문에, heapq에서 빼오면 됨
