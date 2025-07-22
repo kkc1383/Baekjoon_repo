@@ -16,7 +16,7 @@ for start,end in line_list:
     heapq.heappush(min_heap,start) # 오른쪽 x좌표순으로 정렬 했으니 heap에는 시작점이 작은게 앞으로 오게
 
     while min_heap and min_heap[0] < end-max_line: # end- max_line보다는 크거나 같아야 조건에 만족하는데 start중 가장 최소값부터 비교하면서 그 조건에 부합하는 start가 나올때까지 뽑아냄
-        heapq.heappop(min_heap)
+        heapq.heappop(min_heap) # 기준은 바뀌었지만, 살아남았냐? 살아남았으면 남고 못살아남았으면 죽고, 그때그때의 minheap이 maxcount임
     max_count=max(max_count, len(min_heap))
 
 print(max_count)
@@ -50,3 +50,6 @@ print(max_count)
 
 # .sort() 함수는 리턴이 None임! 리턴이 필요할땐 sorted() 쓰기
 # del line_list[0]은 O(n^2)의 시간복잡도를 가짐. 한칸씩 밀어야되서
+# 이 문제를 풀때 절묘하게 맞아떨어지는게, 일단 end기준으로 정렬을 함으로써 앞에서부터 탐색하면 후보군이 0~index밖에 없음.
+# 그리고 다음 차례때도 살아있는지 확인하고 죽었으면 가차없이 버림. 어차피 다음 차례때도 무조건 죽어있을 테니
+#  end-max_line으로 start의 위치에 따라 가능 유무를 확인한다.
