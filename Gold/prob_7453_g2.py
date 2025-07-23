@@ -17,7 +17,7 @@ for a in A:
         ab_sum[a+b]+=1
 
 count=0
-get=ab_sum.get # 메소드 객체를 로컬변수에 저장
+get=ab_sum.get # 메소드 객체를 로컬변수에 저장. 메소드가 변수화 된거임
 for c in C:
     for d in D:
         # 메소드 객체를 호출. 메소드도 그냥 객체로 만들어서 쓰는거임
