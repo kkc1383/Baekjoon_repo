@@ -6,7 +6,7 @@ inout_list=[0]+list(map(int,sys.stdin.readline().strip()))
 
 adj_dict=defaultdict(list)
 
-visited=[False]*(ver_num+1)
+visited=[0]*(ver_num+1)
 total_count=0
 for _ in range(ver_num-1):
     a,b=tuple(map(int,sys.stdin.readline().strip().split()))
@@ -33,8 +33,8 @@ def dfs_iter(start,visited):
     return count*(count-1)
 
 for i in range(1,len(inout_list)):
-    if inout_list[i]==0 and not visited[i]: # 이게 키 포인트였던 것 같음. 
-        visited[i]=True
+    if inout_list[i]==0 and visited[i]!=0: # 이게 키 포인트였던 것 같음. 
+        visited[i]=i
         total_count+=dfs_iter(i,visited)
 
 print(total_count)
