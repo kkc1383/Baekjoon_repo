@@ -33,7 +33,7 @@ def dfs_iter(start,visited):
     return count*(count-1)
 
 for i in range(1,len(inout_list)):
-    if inout_list[i]==0 and visited[i]!=0: # 이게 키 포인트였던 것 같음. 
+    if inout_list[i]==0 and visited[i]==0: # 이게 키 포인트였던 것 같음. 
         visited[i]=i
         total_count+=dfs_iter(i,visited)
 
