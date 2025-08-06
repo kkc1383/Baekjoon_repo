@@ -48,10 +48,10 @@ for i in range(num):
 length_list=[0]*(num)
 
 for n in range(num):
-    length_list[n]=inc[n]+dec[n]+1
+    length_list[n]=inc[n]+dec[n]+1 # 여기서 1은 자기자신
 
-# print(length_list)
 print(max(length_list))
+
 # 바이토닉은 그냥 n^2 걸리더라도 그냥 하는게 나을듯 한 숫자 짚고 왼쪽부터 스택 쌓고 오른쪽으로 내려가면서 최댓값 적어두기
 # 사실 내가하는 방향이 맞았다
 # i번째 까지 올라가는 수열 bisect로 구하고 O(nlogn) 내려가는 수열 bisect로 구하고 O(nlogn) 이거 길이 비교하면 O(nlogn)으로 끝납니다.
